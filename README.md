@@ -51,6 +51,7 @@ Hence we divided all the flights into three categories: Morning (6am to noon),
 Evening (noon to 9pm) and Night (9pm to 6am)
 3. We are focusing on minimizing the flight prices, hence we considered only the economy class, later we can extend this to any class.
 4. Suppose a user makes a query to buy a flight ticket 30 days in advance. Now group the data such a way, Airlines, Departure day, departure time, minimum fare ( airline might have offer on any specific flight id)
+5. For simplicity now the selected date and is sent to the training and results are sent back to client.
 
 Training of Datasets & API conversion
 
