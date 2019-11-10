@@ -16,7 +16,7 @@ class FlightPrediction():
     def __init__(self):
         self.CSV_FILE = 'sha-pek.csv'
         self.COLUMNS =  ["departureDate","price",'priceClass','arrivalDate','rate']
-        self.nRowsRead = 20000 # specify 'None' if want to read whole file
+        self.nRowsRead = None # specify 'None' if want to read whole file
         self.dataFrame = pd.read_csv( self.CSV_FILE  , delimiter=',', nrows = self.nRowsRead,na_filter=True).fillna(value = "missing")
         self.data_conversion()
 
@@ -63,7 +63,7 @@ class FlightPrediction():
         self.input_data = {"departureDate": given_date}
         self.dt_test_list = self.input_data
         self.df_test = pd.DataFrame(self.dt_test_list) 
-        self.df_test['departureDate'] = pd.to_datetime(self.dataFrame['departureDate'])
+        self.df_test['departureDate'] = pd.to_datetime(self.df_test['departureDate'])
         self.dftest_dt = self.df_test['departureDate'].values.reshape(-1,1)
         self.dftest_dt = self.dftest_dt.astype('datetime64[D]').astype(int)
 
