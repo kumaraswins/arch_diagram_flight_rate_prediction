@@ -54,13 +54,27 @@ Evening (noon to 9pm) and Night (9pm to 6am)
 
 Training of Datasets & API conversion
 
-1. Load the CSV, use Linear Regression technique and scikit learn to train the models. We will be getting a .pkl file as an output.
+1. I have uploaded the entire code base with a small flask application where user can select the date and see the prediction below.
+2. There were few missing data which was filled with *dummy data* as of now.
+3. All the date fields was in string, it was converted into date time field using *pandas*.
+4. Also uploaded jupyter notebook file as well. (folder → flight_predict_prices/jupiter).
 
-Store it in the cloud for further reference. The data will be trained every 15 or 30 days or on demand whenever it is necessary.
+Run the application
 
-2. The .pkl file will be loaded whenever  the API is being called, it would take date as the parameter, by default it will predict the flight rates for next 15 days, if required we can have it as variable by sending a query parameter. Once the search is hit, the */predict* api will take date as a primary parameter from which it will predict the flight prices for next 15 days.
+1. Create a python virtual environment, install all the dependencies in the *requirements.txt.*
+2. In the index file where the core logic of training and test data will be present. It will present in the root folder.
 
-![](api-b727b82f-3c77-4d65-822a-25408270f753.jpg)
+    python index.py
+
+1. Inside the root folder execute the following command.
+
+        python __init_.py
+
+    A basic flask server will be hosted in ***[localhost:5000](http://localhost:5000)***
+
+You can the webpage as below.
+
+![](output-3cc39d1f-7415-44b1-a856-e4f34a013b53.gif)
 
 ## 5) This app would serve million of users. How would Chen actually plan to scale this as a full-fledged enterprise level platform ?
 

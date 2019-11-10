@@ -1,0 +1,16 @@
+<div ng-controller="DashboardController">
+    <h3>Test</h3>
+    <div layout="row">
+        <div flex="60">
+            <form name="userForm" novalidate>                
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>First name</label>
+                        <input ng-model="user.firstName" type="text" name="first" required>                        
+                    </md-input-container>                   
+                    <div ng-show="userForm.$submitted || userForm.first.$touched">
+                      <div class="error" ng-show="userForm.first.$error.required">Enter First name.</div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+<div ng-controller="RegisterController">
+    <div layout="row">
+        <div flex="60" ng-init= "showTable= false">
+            <form name="registerForm" novalidate>                
+                 <md-button  class="md-raised md-primary"  ng-click =trainData()>Prepare Data</md-button>
+                    <span ng-bind = "trainedStatus"></span>
+                    <md-input-container class="md-block" flex-gt-sm>
+                    Select Date
+                        <select ng-model="selectedDate"  type="text" name="second" ng-options="d as d for d in data" ng-change = dateSelection()>
+                        </select>
+                    </md-input-container>
+                    <div ng-show="registerForm.$submitted || registerForm.second.$touched">
+                      <div class="error" ng-show="registerForm.second.$error.required">Enter Second name.</div>
+                    </div>
+
+                    <table ng-show ="showTable">
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th> 
+                            <th>Price</th> 
+                        </tr>
+                        <tr ng-repeat = "data in flightList">
+                        <td ng-bind="data.date"></td>
+                        <td ng-bind="data.time"></td>
+                        <td ng-bind="data.price"></td>
+                        </tr>
+                        </table>
+            </form>
+        </div>
+    </div>
+</div>
