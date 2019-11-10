@@ -51,14 +51,15 @@ Hence we divided all the flights into three categories: Morning (6am to noon),
 Evening (noon to 9pm) and Night (9pm to 6am)
 3. We are focusing on minimizing the flight prices, hence we considered only the economy class, later we can extend this to any class.
 4. Suppose a user makes a query to buy a flight ticket 30 days in advance. Now group the data such a way, Airlines, Departure day, departure time, minimum fare ( airline might have offer on any specific flight id)
-5. For simplicity now the selected date and is sent to the training and results are sent back to client.
 
 Training of Datasets & API conversion
 
 1. I have uploaded the entire code base with a small flask application where user can select the date and see the prediction below.
 2. There were few missing data which was filled with *dummy data* as of now.
 3. All the date fields was in string, it was converted into date time field using *pandas*.
-4. Also uploaded jupyter notebook file as well. (folder → flight_predict_prices/jupiter).
+4. Also uploaded [jupyter notebook](https://github.com/kumaraswins/arch_diagram_flight_rate_prediction/blob/master/jupiter/flight_linear_reg.ipynb) file as well. (folder → flight_predict_prices/jupiter).
+
+Refer to the [link](https://github.com/kumaraswins/arch_diagram_flight_rate_prediction/blob/master/jupiter/flight_linear_reg.ipynb)
 
 Run the application
 
@@ -75,7 +76,7 @@ Run the application
 
 You can the webpage as below.
 
-![](output-3cc39d1f-7415-44b1-a856-e4f34a013b53.gif)
+![](output-87bfaa65-9a09-44ec-a589-f960a9197d4c.gif)
 
 ## 5) This app would serve million of users. How would Chen actually plan to scale this as a full-fledged enterprise level platform ?
 
