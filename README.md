@@ -54,11 +54,12 @@ Evening (noon to 9pm) and Night (9pm to 6am)
 
 Training of Datasets & API conversion
 
+For now we are only considering the date, later can be extended and consider other parameters like time day etc.
+
 1. I have uploaded the entire code base with a small flask application where user can select the date and see the prediction below.
 2. There were few missing data which was filled with *dummy data* as of now.
 3. All the date fields was in string, it was converted into date time field using *pandas*.
-4. Also uploaded [jupyter notebook](https://github.com/kumaraswins/arch_diagram_flight_rate_prediction/blob/master/jupiter/flight_linear_reg.ipynb) file as well. (folder → flight_predict_prices/jupiter).
-
+4. Also uploaded jupyter notebook.
 Refer to the [link](https://github.com/kumaraswins/arch_diagram_flight_rate_prediction/blob/master/jupiter/flight_linear_reg.ipynb)
 
 Run the application
@@ -68,11 +69,12 @@ Run the application
 
     python index.py
 
-1. Inside the root folder execute the following command.
+3. Inside the root folder execute the following command.
 
         python __init_.py
 
     A basic flask server will be hosted in ***[localhost:5000](http://localhost:5000)***
+4. The selected date will be sent to the server using a API as post body and results are published in the HTML page in a table view. 
 
 You can the webpage as below.
 
